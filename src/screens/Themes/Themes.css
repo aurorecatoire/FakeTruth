@@ -1,0 +1,71 @@
+/* Page globale */
+.themes-page {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #0b1c2d, #123a63);
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Texte d’introduction */
+.themes-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Liste des thèmes */
+.themes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Carte thème (base) */
+.theme-card {
+  background: #ffffff;
+  color: #0b1c2d;
+  padding: 1.8rem 1.2rem;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover */
+.theme-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Couleurs façon Question pour un Champion */
+.theme-rumors {
+  border-left: 8px solid #f5c400; /* jaune */
+}
+
+.theme-hoaxes {
+  border-left: 8px solid #d62828; /* rouge */
+}
+
+.theme-clickbait {
+  border-left: 8px solid #1d4ed8; /* bleu */
+}
+
+.theme-quotes {
+  border-left: 8px solid #f77f00; /* orange */
+}
+
+.theme-context {
+  border-left: 8px solid #2a9d8f; /* vert/bleu */
+}
+
+.theme-parodies {
+  border-left: 8px solid #7209b7; /* violet */
+}

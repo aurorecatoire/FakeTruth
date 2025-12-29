@@ -1,10 +1,16 @@
 import "./App.css";
-import { motion } from "framer-motion";
 import { Card, CardContent } from "./components/ui/Card";
 import { Button } from "./components/ui/Button";
 import { Brain, Zap, Target } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
+  const navigate = useNavigate();
+
+  const handleClickStart = () => {
+    navigate("/themes");
+  };
+
   return (
     <div>
       <motion.div
@@ -18,17 +24,12 @@ export default function App() {
           <h1 className="title">BRAIN XP</h1>
           <p>
             Améliore ton intelligence comme dans un jeu vidéo.
-            
             {/*  aller à la ligne suivante */}
-            <br />
-            3 minutes par jour. Zéro cours.
-            100 % actif.
+            <br />3 minutes par jour. Zéro cours. 100 % actif.
           </p>
-          <div >
-            <Button >Commencer</Button>
-            <Button >
-              Voir comment ça marche
-            </Button>
+          <div>
+            <Button onClick={handleClickStart}>Start</Button>
+            <Button>Voir comment ça marche</Button>
           </div>
         </div>
 
@@ -47,7 +48,7 @@ export default function App() {
 
           <Card>
             <CardContent>
-              <Brain/>
+              <Brain />
               <h3>XP & niveaux</h3>
               <p>
                 Logique, esprit critique, créativité : chaque compétence a son
@@ -58,7 +59,7 @@ export default function App() {
 
           <Card>
             <CardContent>
-              <Target/>
+              <Target />
               <h3>Intelligence utile</h3>
               <p>
                 Apprends à raisonner, détecter les fake news et mieux
@@ -69,9 +70,7 @@ export default function App() {
         </div>
 
         {/* FOOTER */}
-        <div>
-          BRAIN XP — entraîne ton cerveau, pas ta patience.
-        </div>
+        <div>BRAIN XP — entraîne ton cerveau, pas ta patience.</div>
       </motion.div>
     </div>
   );
