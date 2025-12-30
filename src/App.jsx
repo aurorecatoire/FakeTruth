@@ -3,6 +3,7 @@ import { Card, CardContent } from "./components/ui/Card";
 import { Button } from "./components/ui/Button";
 import { Brain, Zap, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function App() {
   const navigate = useNavigate();
