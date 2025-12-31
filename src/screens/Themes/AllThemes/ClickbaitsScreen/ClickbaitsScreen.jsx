@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./HoaxesScreen.css";
+import "./ClickbaitsScreen.css";
 
-const HoaxesScreen = () => {
+const ClickbaitsScreen = () => {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -11,7 +11,7 @@ const HoaxesScreen = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/hoaxes");
+        const response = await axios.get("http://localhost:3000/clickbaits");
         setQuestions(response.data);
       } catch (error) {
         console.error("Erreur lors de la récupération des questions :", error);
@@ -44,7 +44,7 @@ const HoaxesScreen = () => {
 
   return (
     <div className="quiz-container">
-      <h1>HOAXES</h1>
+      <h1>CLICKBAITS</h1>
 
       <h2>{currentQuestion.title}</h2>
       <p>{currentQuestion.question}</p>
@@ -93,4 +93,4 @@ const HoaxesScreen = () => {
   );
 };
 
-export default HoaxesScreen;
+export default ClickbaitsScreen;

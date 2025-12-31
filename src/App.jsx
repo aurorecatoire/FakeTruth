@@ -8,71 +8,58 @@ import { motion } from "framer-motion";
 export default function App() {
   const navigate = useNavigate();
 
-  const handleClickStart = () => {
-    navigate("/themes");
-  };
-
   return (
-    <div>
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        //Pour faire des animations fluides, le hero apparait doucement
-      >
-        {/* HERO */}
-        <div className="Para1">
-          <h1 className="title">BRAIN XP</h1>
-          <p>
-            Améliore ton intelligence comme dans un jeu vidéo.
-            {/*  aller à la ligne suivante */}
-            <br />3 minutes par jour. Zéro cours. 100 % actif.
-          </p>
-          <div>
-            <Button onClick={handleClickStart}>Start</Button>
-            <Button>Voir comment ça marche</Button>
-          </div>
-        </div>
+    <div className="app">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <section className="hero">
+            <h1 className="title">BRAIN XP</h1>
+            <p className="subtitle">
+              Upgrade your intelligence like a video game.
+              <br />
+              3 minutes a day. No lectures. 100% active.
+            </p>
 
-        {/* FEATURES */}
-        <div>
-          <Card>
-            <CardContent>
-              <Zap />
-              <h3>Micro-défis</h3>
-              <p>
-                Des défis de 2 à 5 minutes pour entraîner ton cerveau sans
-                t’ennuyer.
-              </p>
-            </CardContent>
-          </Card>
+            <div className="hero-buttons">
+              <Button onClick={()=>{navigate("/themes")}}>Start the Challenge</Button>
+            </div>
+          </section>
 
-          <Card>
-            <CardContent>
-              <Brain />
-              <h3>XP & niveaux</h3>
-              <p>
-                Logique, esprit critique, créativité : chaque compétence a son
-                arbre.
-              </p>
-            </CardContent>
-          </Card>
+          <section className="features">
+            <Card className="feature-card">
+              <CardContent>
+                <Zap className="icon" />
+                <h3>Micro-Challenges</h3>
+                <p>2–5 minute challenges. No boredom.</p>
+              </CardContent>
+            </Card>
 
-          <Card>
-            <CardContent>
-              <Target />
-              <h3>Intelligence utile</h3>
-              <p>
-                Apprends à raisonner, détecter les fake news et mieux
-                argumenter.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+            <Card className="feature-card">
+              <CardContent>
+                <Brain className="icon" />
+                <h3>XP & Levels</h3>
+                <p>Each skill has its own progression tree.</p>
+              </CardContent>
+            </Card>
 
-        {/* FOOTER */}
-        <div>BRAIN XP — entraîne ton cerveau, pas ta patience.</div>
-      </motion.div>
+            <Card className="feature-card">
+              <CardContent>
+                <Target className="icon" />
+                <h3>Useful Intelligence</h3>
+                <p>Reason better. Spot fake news.</p>
+              </CardContent>
+            </Card>
+          </section>
+
+          <footer className="footer">
+            BRAIN XP — train your brain, not your patience.
+          </footer>
+        </motion.div>
+      </div>
     </div>
   );
 }

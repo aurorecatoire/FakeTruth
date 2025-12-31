@@ -81,7 +81,7 @@ const RumorsScreen = () => {
 
       {selectedAnswer && (
         <button className="next-btn" onClick={nextQuestion}>
-          Question suivante
+          Next
         </button>
       )}
 

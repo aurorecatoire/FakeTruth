@@ -1,0 +1,20 @@
+.answer-button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.goodAnswer {
+  background-color: #4caf50;
+  color: white;
+}
+
+.wrongAnswer {
+  background-color: #f44336;
+  color: white;
+}
+
+.next-btn {
+  margin-top: 20px;
+}

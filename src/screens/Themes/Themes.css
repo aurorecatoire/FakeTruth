@@ -1,71 +1,114 @@
-/* Page globale */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap");
+
+:root {
+  --blue: #0a1cff;
+  --yellow: #ffd700;
+  --light: #ffffff;
+}
+
+/* PAGE */
 .themes-page {
   min-height: 100vh;
-  padding: 3rem 2rem;
-  background: linear-gradient(135deg, #0b1c2d, #123a63);
-  color: #ffffff;
-  font-family: "Segoe UI", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at top, #0d1bff, #020210);
+  font-family: "Orbitron", sans-serif;
+  color: var(--light);
 }
 
-/* Texte d’introduction */
-.themes-intro {
+/* CONTAINER */
+.themes-container {
+  width: 100%;
+  max-width: 900px;
   text-align: center;
-  font-size: 1.1rem;
+}
+
+/* INTRO */
+.themes-intro {
+  font-size: 1.4rem;
   margin-bottom: 3rem;
   line-height: 1.6;
-  opacity: 0.9;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
-/* Liste des thèmes */
+.themes-intro span {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+/* LIST */
 .themes-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-items: center;
 }
 
-/* Carte thème (base) */
+/* CARD */
 .theme-card {
-  background: #ffffff;
-  color: #0b1c2d;
-  padding: 1.8rem 1.2rem;
-  border-radius: 14px;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
+  width: 100%;
+  max-width: 260px;
+  padding: 2rem 1.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  color: var(--light);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 215, 0, 0.15),
+    rgba(10, 28, 255, 0.2)
+  );
+  border: 2px solid var(--yellow);
+  border-radius: 20px;
   cursor: pointer;
+  box-shadow:
+    0 0 15px rgba(255, 215, 0, 0.4),
+    inset 0 0 20px rgba(10, 28, 255, 0.4);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Hover */
+/* HOVER */
 .theme-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  transform: scale(1.08);
+  box-shadow:
+    0 0 30px rgba(255, 215, 0, 0.9),
+    inset 0 0 30px rgba(10, 28, 255, 0.7);
 }
 
-/* Couleurs façon Question pour un Champion */
+/* INDIVIDUAL ACCENTS (subtils) */
 .theme-rumors {
-  border-left: 8px solid #f5c400; /* jaune */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
 .theme-hoaxes {
-  border-left: 8px solid #d62828; /* rouge */
+  box-shadow: 0 0 15px rgba(10, 28, 255, 0.5);
 }
 
 .theme-clickbait {
-  border-left: 8px solid #1d4ed8; /* bleu */
+  box-shadow: 0 0 15px rgba(255, 100, 100, 0.6);
 }
 
 .theme-quotes {
-  border-left: 8px solid #f77f00; /* orange */
+  box-shadow: 0 0 15px rgba(150, 255, 200, 0.6);
 }
 
 .theme-context {
-  border-left: 8px solid #2a9d8f; /* vert/bleu */
+  box-shadow: 0 0 15px rgba(200, 150, 255, 0.6);
 }
 
 .theme-parodies {
-  border-left: 8px solid #7209b7; /* violet */
+  box-shadow: 0 0 15px rgba(255, 180, 80, 0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .themes-intro {
+    font-size: 1.1rem;
+  }
+
+  .theme-card {
+    font-size: 1rem;
+  }
 }
