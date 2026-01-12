@@ -21,7 +21,7 @@ const ClickbaitsScreen = () => {
     fetchQuestions();
   }, []);
 
-  if (questions.length === 0) {
+  if (questions.length === 0) { // si on a pas de réponse
     return <p>No answer find</p>;
   }
 
@@ -32,7 +32,7 @@ const ClickbaitsScreen = () => {
 
     setSelectedAnswer(answer);
 
-    if (answer === currentQuestion.answer) {
+    if (answer === currentQuestion.answer) { //si on a la bonne réponse
       setScore(score + 1);
     }
   };

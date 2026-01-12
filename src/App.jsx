@@ -17,11 +17,11 @@ export default function App() {
           transition={{ duration: 0.6 }}
         >
           <section className="hero">
-            <h1 className="title">BRAIN XP</h1>
+            <h1 className="title">FakeTruth</h1>
+            
             <p className="subtitle">
-              Upgrade your intelligence like a video game.
-              <br />
-              3 minutes a day. No lectures. 100% active.
+              Upgrade your intelligence by detectinf fake news.
+              
             </p>
 
             <div className="hero-buttons">
@@ -34,29 +34,13 @@ export default function App() {
               <CardContent>
                 <Zap className="icon" />
                 <h3>Micro-Challenges</h3>
-                <p>2–5 minute challenges. No boredom.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="feature-card">
-              <CardContent>
-                <Brain className="icon" />
-                <h3>XP & Levels</h3>
-                <p>Each skill has its own progression tree.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="feature-card">
-              <CardContent>
-                <Target className="icon" />
-                <h3>Useful Intelligence</h3>
-                <p>Reason better. Spot fake news.</p>
+                <p>5 minutes of challenge. No boredom.</p>
               </CardContent>
             </Card>
           </section>
 
           <footer className="footer">
-            BRAIN XP — train your brain, not your patience.
+            FakeTruth — train your brain, to detect the truth.
           </footer>
         </motion.div>
       </div>
